@@ -410,7 +410,7 @@ const tokenizeText = (text: string) =>
       if (a.startsWith(b) || b.startsWith(a)) return true;
     
       const maxLen = Math.max(a.length, b.length);
-      const lenDiff = Math.abs(a.length - b.length)
+      const lenDiff = Math.abs(a.length - b.length);
     
       if (lenDiff > 2) return false;
     
