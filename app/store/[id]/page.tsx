@@ -410,7 +410,7 @@ const tokenizeText = (text: string) =>
       if (a.startsWith(b) || b.startsWith(a)) return true;
     
       const maxLen = Math.max(a.length, b.length);
-      const lenDiff = Math.abs(a.length, b.length);
+      const lenDiff = Math.abs(a.length - b.length)
     
       if (lenDiff > 2) return false;
     
@@ -1078,6 +1078,7 @@ export default function Page() {
         const packInfo = extractPackInfo(product.master_products?.unit);
 
         let score = 0;
+
 
         if (name.includes(inputItem.cleanName)) score += 45;
         if (category === inputItem.category) score += 36;
