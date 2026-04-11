@@ -881,6 +881,7 @@ export default function Page() {
   const [loadingProductId, setLoadingProductId] = useState<Product["id"] | null>(null);
   const [loadingText, setLoadingText] = useState("");
   const [isListening, setIsListening] = useState(false);
+  const [viewportHeight, setViewportHeight] = useState<number | null>(null);
 
   const prompts = [
     "Type karo… 1 kg atta + 1 kg chawal",
@@ -973,6 +974,25 @@ export default function Page() {
 
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    const viewport = window.visualViewport;
+  
+    const updateViewportHeight = () => {
+      const nextHeight = viewport?.height || window.innerHeight;
+      setViewportHeight(nextHeight);
+    };
+  
+    updateViewportHeight();
+  
+    viewport?.addEventListener("resize", updateViewportHeight);
+    window.addEventListener("resize", updateViewportHeight);
+  
+    return () => {
+      viewport?.removeEventListener("resize", updateViewportHeight);
+      window.removeEventListener("resize", updateViewportHeight);
+    };
+  }, []);
+  
 
   const liveSuggestions = useMemo(() => {
     const query = normalizeText(searchQuery);
@@ -2187,11 +2207,11 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           color: #111;
         }
 
-       @media (max-width: 480px) {
+    @media (max-width: 480px) {
   .page-wrap {
     padding: 0;
-    min-height: 100svh;
-    height: 100svh;
+    min-height: 100dvh;
+    height: 100dvh;
     align-items: stretch;
     justify-content: stretch;
   }
@@ -2199,38 +2219,141 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
   .phone {
     max-width: 100vw;
     width: 100vw;
-    height: 100svh;
-    min-height: 100svh;
+    height: 100dvh;
+    min-height: 100dvh;
     border-radius: 0;
     border: none;
     box-shadow: none;
-  }
-
-  .chat {
-    padding: 12px;
-  }
-
-  .input-bar {
-    padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
-    gap: 8px;
-  }
-
-  .input-pill {
-    font-size: 16px;
-    min-height: 46px;
   }
 
   .topbar {
     padding-left: 12px;
     padding-right: 12px;
   }
-}
 
+  .chat {
+    padding: 14px 12px 10px;
+    gap: 12px;
+  }
+
+  .popular-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    border-radius: 18px;
+  }
+
+  .product-img {
+    height: 120px;
+    padding: 8px;
+  }
+
+  .product-card.compact .product-img {
+    height: 120px;
+    padding: 8px;
+  }
+
+  .product-body {
+    padding: 10px;
+  }
+
+  .product-name {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .product-card.compact .product-name {
+    font-size: 14px;
+    min-height: 36px;
+  }
+
+  .product-price {
+    font-size: 15px;
+  }
+
+  .product-card.compact .product-price {
+    font-size: 15px;
+  }
+
+  .product-unit {
+    font-size: 12px;
+    min-height: 18px;
+  }
+
+  .product-card.compact .product-unit {
+    font-size: 12px;
+    min-height: 18px;
+  }
+
+  .add-btn {
+    height: 34px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .product-card.compact .add-btn {
+    height: 34px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .stepper-btn {
+    height: 34px;
+  }
+
+  .step-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 15px;
+  }
+
+  .step-count {
+    font-size: 13px;
+  }
+
+  .input-bar {
+    padding: 10px 10px calc(12px + env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+
+  .input-pill {
+    font-size: 16px;
+    min-height: 50px;
+    padding: 13px 16px;
+  }
+
+  .icon-btn-ghost,
+  .icon-btn-dark {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .bubble {
+    font-size: 14px;
+  }
+
+  .summary-title,
+  .delivery-title,
+  .history-title {
+    font-size: 15px;
+  }
+}
       `}
       </style>
 
       <div className="page-wrap">
-        <div className="phone">
+      <div
+  className="phone"
+  style={
+    viewportHeight
+      ? { height: `${viewportHeight}px`, minHeight: `${viewportHeight}px` }
+      : undefined
+  }
+>
           <div className="topbar">
           <div className="store-mark">
   <img src="/shops.jpg" alt="shopkeeper" />
