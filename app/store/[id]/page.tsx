@@ -860,6 +860,7 @@ export default function Page() {
   const detailsRef = useRef<HTMLDivElement>(null);
   const paymentRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [products, setProducts] = useState<Product[]>([]);
   const [popularProducts, setPopularProducts] = useState<Product[]>([]);
@@ -992,7 +993,34 @@ export default function Page() {
       window.removeEventListener("resize", updateViewportHeight);
     };
   }, []);
-  
+  useEffect(() => {
+  const scrollComposerIntoView = () => {
+    window.setTimeout(() => {
+      bottomRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+      });
+    }, 180);
+  };
+
+  const handleViewportChange = () => {
+    if (document.activeElement === inputRef.current) {
+      scrollComposerIntoView();
+    }
+  };
+
+  const inputEl = inputRef.current;
+  const viewport = window.visualViewport;
+
+  inputEl?.addEventListener("focus", scrollComposerIntoView);
+  viewport?.addEventListener("resize", handleViewportChange);
+
+  return () => {
+    inputEl?.removeEventListener("focus", scrollComposerIntoView);
+    viewport?.removeEventListener("resize", handleViewportChange);
+  };
+}, []);
+
 
   const liveSuggestions = useMemo(() => {
     const query = normalizeText(searchQuery);
@@ -2237,81 +2265,83 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
   }
 
   .popular-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
 
-  .product-card {
-    border-radius: 18px;
-  }
+.product-card {
+  border-radius: 16px;
+}
 
-  .product-img {
-    height: 120px;
-    padding: 8px;
-  }
+.product-img {
+  height: 96px;
+  padding: 6px;
+}
+
 
   .product-card.compact .product-img {
-    height: 120px;
-    padding: 8px;
-  }
+  height: 96px;
+  padding: 6px;
+}
 
-  .product-body {
-    padding: 10px;
-  }
+.product-body {
+  padding: 8px 6px 9px;
+}
 
-  .product-name {
-    font-size: 14px;
-    line-height: 1.3;
-  }
+.product-name {
+  font-size: 12px;
+  line-height: 1.25;
+}
 
-  .product-card.compact .product-name {
-    font-size: 14px;
-    min-height: 36px;
-  }
+ .product-card.compact .product-name {
+  font-size: 12px;
+  min-height: 32px;
+}
 
-  .product-price {
-    font-size: 15px;
-  }
+.product-price {
+  font-size: 14px;
+}
 
-  .product-card.compact .product-price {
-    font-size: 15px;
-  }
+.product-card.compact .product-price {
+  font-size: 14px;
+}
 
-  .product-unit {
-    font-size: 12px;
-    min-height: 18px;
-  }
+.product-unit {
+  font-size: 11px;
+  min-height: 16px;
+}
 
   .product-card.compact .product-unit {
-    font-size: 12px;
-    min-height: 18px;
-  }
+  font-size: 11px;
+  min-height: 16px;
+}
 
-  .add-btn {
-    height: 34px;
-    font-size: 12px;
-    border-radius: 10px;
-  }
+.add-btn {
+  height: 32px;
+  font-size: 11px;
+  border-radius: 10px;
+}
 
-  .product-card.compact .add-btn {
-    height: 34px;
-    font-size: 12px;
-    border-radius: 10px;
-  }
+.product-card.compact .add-btn {
+  height: 32px;
+  font-size: 11px;
+  border-radius: 10px;
+}
 
-  .stepper-btn {
-    height: 34px;
-  }
+.stepper-btn {
+  height: 32px;
+}
 
-  .step-btn {
-    width: 22px;
-    height: 22px;
-    font-size: 15px;
-  }
 
-  .step-count {
-    font-size: 13px;
-  }
+ .step-btn {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+}
+
+.step-count {
+  font-size: 12px;
+}
 
   .input-bar {
     padding: 10px 10px calc(12px + env(safe-area-inset-bottom));
@@ -2921,7 +2951,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           </div>
 
           <div className="input-bar">
-          <input
+     <input
+  ref={inputRef}
   className="input-pill"
   placeholder={prompts[placeholderIndex]}
   value={searchQuery}
