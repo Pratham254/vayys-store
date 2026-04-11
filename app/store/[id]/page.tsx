@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 const TRANSLATIONS = {
   en: {
     storeName: "Sharma Ji Ki Dukaan",
-    storeSub: "Live shop helper · Open",
+    storeSub: "General Store",
     today: "Today",
     popular: "Popular right now",
     greeting:
@@ -855,7 +855,7 @@ const ProductCard = ({
 );
 
 export default function Page() {
-  const params = useParams();
+  const params = useParams<{ id?: string | string[] }>();
   const deliveryRef = useRef<HTMLDivElement>(null);
   const detailsRef = useRef<HTMLDivElement>(null);
   const paymentRef = useRef<HTMLDivElement>(null);
@@ -885,7 +885,7 @@ export default function Page() {
   const prompts = [
     "Type karo… 1 kg atta + 1 kg chawal",
     "Hinglish works… 1 kilo chawal aur 1 kilo atta",
-    "Try karo… 2 doodh 6 ande namak",
+    "Try karo… 2 doodh 1 namak",
     "Try karo… bhai chinni aur doodh bhej do",
   ];
 
@@ -894,6 +894,7 @@ export default function Page() {
   useEffect(() => {
     async function loadProducts() {
       const slug = Array.isArray(params?.id) ? params.id[0] : params?.id;
+      if (!slug) return;
 
       const { data: storeData, error: storeError } = await supabase
         .from("stores")
@@ -1368,44 +1369,55 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
   return (
     <>
       <style>{`
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
-        .page-wrap {
-          background:
-            radial-gradient(circle at top, rgba(255,255,255,0.82), transparent 30%),
-            linear-gradient(180deg, #efede7 0%, #e6e1d8 100%);
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 18px;
-          font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
+.page-wrap {
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.82), transparent 30%),
+    linear-gradient(180deg, #efede7 0%, #e6e1d8 100%);
+  min-height: 100svh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
 
         .phone {
-          background: rgba(255,255,255,0.97);
-          border: 1px solid rgba(255,255,255,0.5);
-          overflow: hidden;
-          width: 100%;
-          max-width: 430px;
-          height: 100dvh;
-          display: flex;
-          flex-direction: column;
-          box-shadow: 0 24px 80px rgba(0,0,0,0.08);
-          border-radius: 28px;
-        }
+  background: rgba(255,255,255,0.97);
+  border: 1px solid rgba(255,255,255,0.5);
+  overflow: hidden;
+  width: 100%;
+  max-width: 430px;
+  height: 100svh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.08);
+  border-radius: 28px;
+}
 
-        .topbar {
-          background: rgba(13,13,13,0.93);
-          padding: 14px 16px;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          position: sticky;
-          top: 0;
-          z-index: 10;
-          backdrop-filter: blur(12px);
-        }
+
+       .topbar {
+  background: rgba(13,13,13,0.93);
+  padding: calc(14px + env(safe-area-inset-top)) 16px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  flex-shrink: 0;
+}
+
 
       .store-mark {
   width: 46px;
@@ -1499,15 +1511,18 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           color: #fff;
         }
 
-        .chat {
-          flex: 1;
-          padding: 14px 12px 96px;
-          display: flex;
-          flex-direction: column;
-          gap: 11px;
-          overflow-y: auto;
-          scroll-behavior: smooth;
-        }
+       .chat {
+  flex: 1;
+  min-height: 0;
+  padding: 14px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 
         .date-chip {
           text-align: center;
@@ -1777,51 +1792,54 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           color: #0d0d0d;
         }
 
-        .input-bar {
-          position: sticky;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(255,255,255,0.96);
-          backdrop-filter: blur(18px);
-          padding: 10px 12px calc(14px + env(safe-area-inset-bottom));
-          border-top: 0.5px solid rgba(0,0,0,0.06);
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          z-index: 20;
-          box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
-        }
+      .input-bar {
+  position: relative;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(18px);
+  padding: 10px 12px calc(12px + env(safe-area-inset-bottom));
+  border-top: 0.5px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
+}
 
-        .input-pill {
-          flex: 1;
-          background: #f5f5f3;
-          border: 0.5px solid rgba(0,0,0,0.1);
-          border-radius: 22px;
-          padding: 11px 15px;
-          font-size: 13px;
-          color: #111;
-          outline: none;
-          min-width: 0;
-        }
+
+       .input-pill {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 46px;
+  background: #f5f5f3;
+  border: 0.5px solid rgba(0,0,0,0.1);
+  border-radius: 22px;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #111;
+  outline: none;
+}
+
 
         .input-pill::placeholder {
           color: #9ca3af;
         }
 
-        .icon-btn-ghost,
-        .icon-btn-dark {
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          flex-shrink: 0;
-          transition: all 0.2s ease;
-          border: none;
-        }
+    .icon-btn-ghost,
+.icon-btn-dark {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  min-height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  border: none;
+}
+
 
         .icon-btn-ghost {
           background: linear-gradient(135deg, #ffffff, #f3f4f6);
@@ -2169,16 +2187,47 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           color: #111;
         }
 
-        @media (max-width: 480px) {
-          .page-wrap { padding: 0; }
-          .phone {
-            max-width: 100%;
-            border-radius: 0;
-            border: none;
-            box-shadow: none;
-          }
-        }
-      `}</style>
+       @media (max-width: 480px) {
+  .page-wrap {
+    padding: 0;
+    min-height: 100svh;
+    height: 100svh;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .phone {
+    max-width: 100vw;
+    width: 100vw;
+    height: 100svh;
+    min-height: 100svh;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .chat {
+    padding: 12px;
+  }
+
+  .input-bar {
+    padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+
+  .input-pill {
+    font-size: 16px;
+    min-height: 46px;
+  }
+
+  .topbar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+      `}
+      </style>
 
       <div className="page-wrap">
         <div className="phone">
@@ -2749,17 +2798,19 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           </div>
 
           <div className="input-bar">
-            <input
-              className="input-pill"
-              placeholder={prompts[placeholderIndex]}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleUserMessage();
-                }
-              }}
-            />
+          <input
+  className="input-pill"
+  placeholder={prompts[placeholderIndex]}
+  value={searchQuery}
+  onChange={(e) => setSearchQuery(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === "Enter") {
+      handleUserMessage();
+    }
+  }}
+  enterKeyHint="send"
+/>
+
 
             <button
               className={`icon-btn-ghost${isListening ? " mic-active" : ""}`}
