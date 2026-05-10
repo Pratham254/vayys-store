@@ -2386,7 +2386,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
 >
           <div className="topbar">
           <div className="store-mark">
-  <img src="/shops.jpg" alt="shopkeeper" />
+  <img src="/SHOPO.png" alt="shopkeeper" />
 </div>
 
             <div className="topbar-info">
