@@ -768,7 +768,7 @@ const ProMicIcon = ({ listening }: { listening: boolean }) => (
 
 const BotAvatar = () => (
   <div className="bot-avatar">
-    <img src="/shops.jpg" alt="shopkeeper" />
+    <img src="/SHOPO.png" alt="shopkeeper" />
   </div>
 );
 
