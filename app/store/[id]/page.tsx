@@ -61,7 +61,7 @@ const TRANSLATIONS = {
     upiSub: "PhonePe, GPay, Paytm",
     previousOrders: "Pehle ke order",
     placed: "Ho gaya",
-    orderPlaced: "Order lag gaya",
+    orderPlaced: "Order Confirmed",
     preparing: "Dukaan par taiyaar ho raha hai",
     pickupLabel: "Self pickup",
     deliveryLabel: "Home delivery",
