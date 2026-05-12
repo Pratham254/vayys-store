@@ -7,124 +7,131 @@ import { useParams } from "next/navigation";
 const TRANSLATIONS = {
   en: {
     storeName: "Sharma Ji Ki Dukaan",
-    storeSub: "General Store",
-    today: "Today",
-    popular: "Popular right now",
+    storeSub: "General Store · abhi khuli hai",
+    today: "Aaj",
+    popular: "Trending Today",
     greeting:
-      "Namaste! Type whatever you need, full list also works. I’ll understand and build your cart.",
-    add: "Add",
-    select: "Choose",
-    smart: "You may want this",
-    choose: "Choose exact option",
-    cartTitle: "Your cart",
-    more: "More items",
-    done: "Done",
-    checking: "Checking...",
-    stockCheck: "Checking price and stock...",
-    understanding: "Understanding...",
-    noMatch: "I could not understand properly. Try like 1 kg atta, 2 milk, 6 eggs.",
-    clearAndChoose: "Clear items were added to cart. Choose exact option for the rest.",
-    multipleOptions: "Multiple options found. Choose the correct one below.",
-    partialClear: "I added what was clear. Please write a few items more clearly.",
-    matchedAdded: "Got it. Best matching items were added to cart.",
-    addedSuffix: "added to cart",
-    addFirst: "Add some items first, then tap Done.",
-    chooseDelivery: "Okay. Now choose delivery method.",
-    exactOptionsSub: "Exact options in one line",
-    typingSub: "Quick matches based on typing",
-    deliveryTitle: "How do you want the order?",
-    selfPickup: "Self Pickup",
-    ready10: "Ready in 10 mins",
+      "Namaste! Jo chahiye seedha type karo. Jaise: 1 kilo atta, 2 doodh.",
+    add: "Add karo",
+    select: "Ye wala",
+    smart: "Ye bhi dekh lo",
+    choose: "Sahi item chuno",
+    cartTitle: "Aapka samaan",
+    more: "Aur chahiye",
+    close: "Band karo",
+    done: "Bas, ho gaya",
+    checking: "Dekh raha hoon...",
+    stockCheck: "Rate aur stock dekh raha hoon...",
+    understanding: "Samajh raha hoon...",
+    noMatch: "Samajh nahi aaya. Aise likho: 1 kilo atta, 2 doodh",
+    clearAndChoose: "Jo clear tha woh cart me daal diya. Baaki ke liye sahi item chuno.",
+    multipleOptions: "Is naam ke kai item mile. Neeche sahi wala chuno.",
+    partialClear: "Kuch item add ho gaye. Baaki thoda aur saaf likho.",
+    matchedAdded: "Theek hai, maine item cart me daal diye.",
+    addedSuffix: "cart me daal diya",
+    addFirst: "Pehle kuch samaan add karo, phir aage badho.",
+    chooseDelivery: "Theek hai. Ab batao, pickup chahiye ya delivery?",
+    exactOptionsSub: "Neeche sahi item chuno",
+    typingSub: "Jo type kar rahe ho uske hisaab se match",
+    singleLineExact: "Neeche sahi item chuno",
+    unclearPrefix: "Ye clear nahi hua:",
+    deliveryTitle: "Order kaise chahiye?",
+    selfPickup: "Khud le jaunga",
+    ready10: "10 minute me tayyar",
     free: "Free",
-    homeDelivery: "Home Delivery",
-    deliveryInfo: "₹20 • 30–40 mins",
-    orderSummary: "Order Summary",
-    subtotal: "Subtotal",
+    homeDelivery: "Ghar par delivery",
+    deliveryInfo: "₹20 • 30-40 minute",
+    orderSummary: "Order ka hisaab",
+    subtotal: "Samaan total",
     delivery: "Delivery",
-    total: "Total",
-    continue: "Continue →",
-    phoneTitle: "Enter phone number",
-    detailsTitle: "Enter delivery details",
-    phonePlaceholder: "Phone number",
-    addressPlaceholder: "Complete address",
-    validPhoneAlert: "Enter a valid phone number",
-    addressAlert: "Enter address",
-    placeOrder: "Place Order",
-    choosePayment: "Choose Payment →",
-    paymentTitle: "Choose payment",
+    total: " Total",
+    continue: "Aage badho",
+    phoneTitle: "Apna phone number likho",
+    detailsTitle: "Phone aur address likho",
+    phonePlaceholder: "10 digit phone number",
+    addressPlaceholder: "Poora address likho",
+    validPhoneAlert: "Sahi 10 digit phone number likho",
+    addressAlert: "Poora address likho",
+    placeOrder: "Order pakka karo",
+    choosePayment: "Payment chuno",
+    paymentTitle: "Payment kaise karoge?",
     cod: "Cash on Delivery",
-    codSub: "Pay when order arrives",
-    upi: "UPI Payment",
-    upiSub: "Fast and secure",
-    previousOrders: "Previous Orders",
-    placed: "Placed",
-    orderPlaced: "Order Placed",
-    preparing: "Order is being prepared",
-    pickupLabel: "Self Pickup",
-    deliveryLabel: "Home Delivery",
-    deliveryEta: "Will arrive in 30–40 mins",
+    codSub: "Order aane par paise dena",
+    upi: "UPI se payment",
+    upiSub: "PhonePe, GPay, Paytm",
+    previousOrders: "Pehle ke order",
+    placed: "Ho gaya",
+    orderPlaced: "Order lag gaya",
+    preparing: "Dukaan par taiyaar ho raha hai",
+    pickupLabel: "Self pickup",
+    deliveryLabel: "Home delivery",
+    deliveryEta: "30-40 minute me pahunch jayega",
+    voiceNotSupported: "Is browser me voice typing nahi chal rahi.",
   },
   hi: {
     storeName: "शर्मा जी की दुकान",
-    storeSub: "लाइव दुकान हेल्पर · अभी खुली",
+    storeSub: "आपकी किराना दुकान · अभी खुली है",
     today: "आज",
-    popular: "अभी लोकप्रिय",
+    popular: "आज लोग ये ज़्यादा ले रहे हैं",
     greeting:
-      "नमस्ते! जो चाहिए बस टाइप करो, पूरी लिस्ट भी चलेगी। मैं समझकर कार्ट बना दूँगा।",
-    add: "जोड़ें",
-    select: "चुनें",
-    smart: "शायद ये चाहिए",
-    choose: "सही ऑप्शन चुनें",
-    cartTitle: "आपका कार्ट",
-    more: "और आइटम",
-    done: "हो गया",
-    checking: "चेक कर रहा हूँ...",
-    stockCheck: "रेट और स्टॉक चेक कर रहा हूँ...",
+      "नमस्ते! जो चाहिए सीधा लिख दो। जैसे: 1 किलो आटा, 2 दूध, 6 अंडे। मैं कार्ट बना देता हूँ।",
+    add: "जोड़ो",
+    select: "यही चाहिए",
+    smart: "ये भी देख लो",
+    choose: "सही सामान चुनो",
+    cartTitle: "आपका सामान",
+    more: "और चाहिए",
+    close: "बंद करो",
+    done: "बस, हो गया",
+    checking: "देख रहा हूँ...",
+    stockCheck: "रेट और स्टॉक देख रहा हूँ...",
     understanding: "समझ रहा हूँ...",
-    noMatch: "ठीक से समझ नहीं आया। ऐसे लिखें: 1 किलो आटा, 2 दूध, 6 अंडे।",
-    clearAndChoose: "साफ़ आइटम कार्ट में डाल दिए। बाकी के लिए सही ऑप्शन चुनें।",
-    multipleOptions: "कई ऑप्शन मिले। नीचे से सही वाला चुनें।",
-    partialClear: "जो साफ़ था वो जोड़ दिया। कुछ आइटम और साफ़ लिखें।",
-    matchedAdded: "समझ गया। सबसे अच्छे मैच कार्ट में जोड़ दिए।",
-    addedSuffix: "कार्ट में जुड़ गया",
-    addFirst: "पहले कुछ आइटम कार्ट में जोड़ें, फिर हो गया दबाएँ।",
-    chooseDelivery: "ठीक है। अब डिलीवरी तरीका चुनें।",
-    exactOptionsSub: "एक लाइन में सही ऑप्शन",
-    typingSub: "टाइपिंग के हिसाब से जल्दी मैच",
+    noMatch: "समझ नहीं आया। ऐसे लिखो: 1 किलो आटा, 2 दूध, 6 अंडे।",
+    clearAndChoose: "जो साफ था वो कार्ट में डाल दिया। बाकी के लिए सही सामान चुनो।",
+    multipleOptions: "इस नाम के कई सामान मिले। नीचे सही वाला चुनो।",
+    partialClear: "कुछ सामान जुड़ गया। बाकी थोड़ा और साफ लिखो।",
+    matchedAdded: "ठीक है, सामान कार्ट में डाल दिया।",
+    addedSuffix: "कार्ट में डाल दिया",
+    addFirst: "पहले कुछ सामान जोड़ो, फिर आगे बढ़ो।",
+    chooseDelivery: "ठीक है। अब बताओ, पिकअप चाहिए या डिलीवरी?",
+    exactOptionsSub: "नीचे सही सामान चुनो",
+    typingSub: "जो टाइप कर रहे हो उसके हिसाब से मैच",
+    singleLineExact: "नीचे सही सामान चुनो",
+    unclearPrefix: "ये साफ नहीं हुआ:",
     deliveryTitle: "ऑर्डर कैसे चाहिए?",
-    selfPickup: "सेल्फ पिकअप",
+    selfPickup: "खुद ले जाऊंगा",
     ready10: "10 मिनट में तैयार",
     free: "फ्री",
-    homeDelivery: "होम डिलीवरी",
-    deliveryInfo: "₹20 • 30–40 मिनट",
-    orderSummary: "ऑर्डर सारांश",
-    subtotal: "सबटोटल",
+    homeDelivery: "घर पर डिलीवरी",
+    deliveryInfo: "₹20 • 30-40 मिनट",
+    orderSummary: "ऑर्डर का हिसाब",
+    subtotal: "सामान टोटल",
     delivery: "डिलीवरी",
-    total: "कुल",
-    continue: "आगे बढ़ें →",
-    phoneTitle: "फोन नंबर डालें",
-    detailsTitle: "डिलीवरी डिटेल डालें",
-    phonePlaceholder: "फोन नंबर",
-    addressPlaceholder: "पूरा पता",
-    validPhoneAlert: "सही फोन नंबर डालें",
-    addressAlert: "पता डालें",
-    placeOrder: "ऑर्डर करें",
-    choosePayment: "पेमेंट चुनें →",
-    paymentTitle: "पेमेंट चुनें",
-    cod: "कैश ऑन डिलीवरी",
-    codSub: "ऑर्डर आने पर पे करें",
-    upi: "UPI पेमेंट",
-    upiSub: "तेज़ और सुरक्षित",
-    previousOrders: "पिछले ऑर्डर",
-    placed: "ऑर्डर हुआ",
-    orderPlaced: "ऑर्डर हो गया",
-    preparing: "ऑर्डर तैयार हो रहा है",
+    total: "कुल टोटल",
+    continue: "आगे बढ़ो",
+    phoneTitle: "अपना फोन नंबर लिखो",
+    detailsTitle: "फोन और पता लिखो",
+    phonePlaceholder: "10 अंकों का फोन नंबर",
+    addressPlaceholder: "पूरा पता लिखो",
+    validPhoneAlert: "सही 10 अंकों का फोन नंबर लिखो",
+    addressAlert: "पूरा पता लिखो",
+    placeOrder: "ऑर्डर पक्का करो",
+    choosePayment: "पेमेंट चुनो",
+    paymentTitle: "पेमेंट कैसे करोगे?",
+    cod: "घर पर कैश",
+    codSub: "ऑर्डर आने पर पैसे देना",
+    upi: "UPI से पेमेंट",
+    upiSub: "PhonePe, GPay, Paytm",
+    previousOrders: "पहले के ऑर्डर",
+    placed: "हो गया",
+    orderPlaced: "ऑर्डर लग गया",
+    preparing: "दुकान पर तैयार हो रहा है",
     pickupLabel: "सेल्फ पिकअप",
     deliveryLabel: "होम डिलीवरी",
-    deliveryEta: "30–40 मिनट में आएगा",
+    deliveryEta: "30-40 मिनट में पहुँच जाएगा",
+    voiceNotSupported: "इस ब्राउज़र में वॉइस टाइपिंग नहीं चल रही।",
   },
 } as const;
-
 
 const PRODUCT_COLORS = [
   "#f7f2ea",
@@ -156,7 +163,6 @@ const CATEGORY_ALIASES: Record<string, string[]> = {
   chilli: ["mirchi", "chilli", "chili", "red chilli", "लाल मिर्च", "मिर्च"],
   coriander: ["dhania", "dhaniya", "coriander", "धनिया"],
 };
-
 
 const REPLACEMENTS: Array<[RegExp, string]> = [
   [/\baur\b/g, ","],
@@ -212,6 +218,7 @@ const REPLACEMENTS: Array<[RegExp, string]> = [
   [/पीस/g, "pcs"],
   [/नग/g, "pcs"],
 ];
+
 const PHRASE_ALIASES: Array<[RegExp, string]> = [
   [/\bchai\s*patti\b/g, "tea"],
   [/\bchai\s*pati\b/g, "tea"],
@@ -247,6 +254,7 @@ const PHRASE_ALIASES: Array<[RegExp, string]> = [
   [/\bhaldi\b/g, "turmeric"],
   [/हल्दी/g, "turmeric"],
 ];
+
 const SPOKEN_WORD_MAP: Record<string, string> = {
   chinni: "sugar",
   chini: "sugar",
@@ -372,54 +380,52 @@ const normalizeText = (text: string) => {
     .trim();
 };
 
-
 const tokenizeText = (text: string) =>
   normalizeText(text)
     .split(" ")
     .map(normalizeToken)
     .filter(Boolean);
 
-    const levenshteinDistance = (a: string, b: string) => {
-      const dp = Array.from({ length: a.length + 1 }, () =>
-        Array(b.length + 1).fill(0)
-      );
-    
-      for (let i = 0; i <= a.length; i++) dp[i][0] = i;
-      for (let j = 0; j <= b.length; j++) dp[0][j] = j;
-    
-      for (let i = 1; i <= a.length; i++) {
-        for (let j = 1; j <= b.length; j++) {
-          const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-          dp[i][j] = Math.min(
-            dp[i - 1][j] + 1,
-            dp[i][j - 1] + 1,
-            dp[i - 1][j - 1] + cost
-          );
-        }
-      }
-    
-      return dp[a.length][b.length];
-    };
-    
+const levenshteinDistance = (a: string, b: string) => {
+  const dp = Array.from({ length: a.length + 1 }, () =>
+    Array(b.length + 1).fill(0)
+  );
 
-    const isLooseTokenMatch = (a: string, b: string) => {
-      if (!a || !b) return false;
-    
-      if (a === b) return true;
-      if (a.includes(b) || b.includes(a)) return true;
-      if (a.startsWith(b) || b.startsWith(a)) return true;
-    
-      const maxLen = Math.max(a.length, b.length);
-      const lenDiff = Math.abs(a.length - b.length);
-    
-      if (lenDiff > 2) return false;
-    
-      const distance = levenshteinDistance(a, b);
-    
-      if (maxLen <= 4) return distance <= 1;
-      if (maxLen <= 7) return distance <= 2;
-      return distance <= 3;
-    };
+  for (let i = 0; i <= a.length; i++) dp[i][0] = i;
+  for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return dp[a.length][b.length];
+};
+
+const isLooseTokenMatch = (a: string, b: string) => {
+  if (!a || !b) return false;
+
+  if (a === b) return true;
+  if (a.includes(b) || b.includes(a)) return true;
+  if (a.startsWith(b) || b.startsWith(a)) return true;
+
+  const maxLen = Math.max(a.length, b.length);
+  const lenDiff = Math.abs(a.length - b.length);
+
+  if (lenDiff > 2) return false;
+
+  const distance = levenshteinDistance(a, b);
+
+  if (maxLen <= 4) return distance <= 1;
+  if (maxLen <= 7) return distance <= 2;
+  return distance <= 3;
+};
 
 const cleanName = (text: string) =>
   normalizeText(text)
@@ -885,10 +891,10 @@ export default function Page() {
   const [viewportHeight, setViewportHeight] = useState<number | null>(null);
 
   const prompts = [
-    "Type karo… 1 kg atta + 1 kg chawal",
-    "Hinglish works… 1 kilo chawal aur 1 kilo atta",
-    "Try karo… 2 doodh 1 namak",
-    "Try karo… bhai chinni aur doodh bhej do",
+    "Jaise likho: 1 kilo atta, 2 doodh",
+    "Hinglish bhi chalegi: 1 kilo chawal aur 1 tel",
+    "Jaise likho: 1 namak, 2 bread",
+    "Bina tension likho: doodh, chini, chai",
   ];
 
   const t = TRANSLATIONS[lang];
@@ -925,7 +931,7 @@ export default function Page() {
       const randomPopularProducts = [...allProducts]
         .sort(() => Math.random() - 0.5)
         .slice(0, 6);
-      
+
       setProducts(allProducts);
       setPopularProducts(randomPopularProducts);
     }
@@ -939,20 +945,20 @@ export default function Page() {
         detailsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
-  
+
       if (orderStep === "payment") {
         paymentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
-  
+
       if (orderStage === "delivery") {
         deliveryRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
-  
+
       bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
     }, 120);
-  
+
     return () => clearTimeout(timer);
   }, [
     botMessage,
@@ -966,7 +972,6 @@ export default function Page() {
     completedOrders.length,
     justPlacedOrder?.id,
   ]);
-  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -974,60 +979,61 @@ export default function Page() {
     }, 2800);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [prompts.length]);
+
   useEffect(() => {
     const viewport = window.visualViewport;
-  
+
     const updateViewportHeight = () => {
       const nextHeight = viewport?.height || window.innerHeight;
       setViewportHeight(nextHeight);
     };
-  
+
     updateViewportHeight();
-  
+
     viewport?.addEventListener("resize", updateViewportHeight);
     window.addEventListener("resize", updateViewportHeight);
-  
+
     return () => {
       viewport?.removeEventListener("resize", updateViewportHeight);
       window.removeEventListener("resize", updateViewportHeight);
     };
   }, []);
+
   useEffect(() => {
-  const scrollComposerIntoView = () => {
-    window.setTimeout(() => {
-      bottomRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-      });
-    }, 180);
-  };
+    const scrollComposerIntoView = () => {
+      window.setTimeout(() => {
+        bottomRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+      }, 180);
+    };
 
-  const handleViewportChange = () => {
-    if (document.activeElement === inputRef.current) {
-      scrollComposerIntoView();
-    }
-  };
+    const handleViewportChange = () => {
+      if (document.activeElement === inputRef.current) {
+        scrollComposerIntoView();
+      }
+    };
 
-  const inputEl = inputRef.current;
-  const viewport = window.visualViewport;
+    const inputEl = inputRef.current;
+    const viewport = window.visualViewport;
 
-  inputEl?.addEventListener("focus", scrollComposerIntoView);
-  viewport?.addEventListener("resize", handleViewportChange);
+    inputEl?.addEventListener("focus", scrollComposerIntoView);
+    viewport?.addEventListener("resize", handleViewportChange);
 
-  return () => {
-    inputEl?.removeEventListener("focus", scrollComposerIntoView);
-    viewport?.removeEventListener("resize", handleViewportChange);
-  };
-}, []);
-
+    return () => {
+      inputEl?.removeEventListener("focus", scrollComposerIntoView);
+      viewport?.removeEventListener("resize", handleViewportChange);
+    };
+  }, []);
 
   const liveSuggestions = useMemo(() => {
     const query = normalizeText(searchQuery);
     if (!query) return [] as Product[];
-  
+
     const queryTokens = tokenizeText(query);
-  
+
     const ranked = [...products]
       .map((product) => {
         const rawName = product.master_products?.name || "";
@@ -1038,13 +1044,13 @@ export default function Page() {
         const unitTokens = tokenizeText(rawUnit);
         const category = detectCategory(name);
         const queryCategory = detectCategory(query);
-  
+
         let score = 0;
-  
+
         if (name.includes(query)) score += 70;
         if (unit.includes(query)) score += 20;
         if (category === queryCategory) score += 24;
-  
+
         queryTokens.forEach((queryToken) => {
           const matchedName = nameTokens.some((nameToken) =>
             isLooseTokenMatch(queryToken, nameToken)
@@ -1052,22 +1058,21 @@ export default function Page() {
           const matchedUnit = unitTokens.some((unitToken) =>
             isLooseTokenMatch(queryToken, unitToken)
           );
-  
+
           if (matchedName) score += 14;
           if (matchedUnit) score += 8;
         });
-  
+
         return { product, score };
       })
       .filter((item) => item.score > 10)
       .sort((a, b) => b.score - a.score)
       .slice(0, 10);
-  
-      return ranked
+
+    return ranked
       .map((item) => item.product)
       .filter((product) => !cartProducts.some((cart) => cart.product.id === product.id));
-    }, [products, searchQuery, cartProducts]);
-  
+  }, [products, searchQuery, cartProducts]);
 
   const pendingChoiceCards = useMemo(
     () =>
@@ -1081,7 +1086,7 @@ export default function Page() {
       ),
     [pendingChoices]
   );
-  
+
   const subtotal = cartProducts.reduce((sum, item) => sum + (item.product.price || 0) * item.qty, 0);
   const deliveryCharge = deliveryType === "delivery" ? 20 : 0;
   const grandTotal = subtotal + deliveryCharge;
@@ -1128,27 +1133,25 @@ export default function Page() {
 
         let score = 0;
 
-
         if (name.includes(inputItem.cleanName)) score += 45;
         if (category === inputItem.category) score += 36;
 
         const rawProductName = product.master_products?.name || "";
-const rawProductUnit = product.master_products?.unit || "";
-const combinedText = normalizeText(`${rawProductName} ${rawProductUnit}`);
+        const rawProductUnit = product.master_products?.unit || "";
+        const combinedText = normalizeText(`${rawProductName} ${rawProductUnit}`);
 
-CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
-  const normalizedAlias = normalizeText(alias);
-  if (normalizedAlias && combinedText.includes(normalizedAlias)) {
-    score += 18;
-  }
-});
-
+        CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
+          const normalizedAlias = normalizeText(alias);
+          if (normalizedAlias && combinedText.includes(normalizedAlias)) {
+            score += 18;
+          }
+        });
 
         queryTokens.forEach((queryToken) => {
           const matched = nameTokens.some((nameToken) =>
             isLooseTokenMatch(queryToken, nameToken)
           );
-        
+
           if (matched) {
             score += 16;
           }
@@ -1213,11 +1216,13 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
     setSearchQuery("");
     setShowSuggestions(false);
   };
+
   const handleSuggestionAdd = async (product: Product, qty = 1) => {
     await handleAdd(product, qty);
     setSearchQuery("");
     setShowSuggestions(false);
   };
+
   const handleDoneIntent = () => {
     if (cartProducts.length === 0) {
       setBotMessage({
@@ -1383,7 +1388,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
     if (!SpeechRecognition) {
       setBotMessage({
         type: "ai",
-        text: "Voice input is browser me support nahi hai.",
+        text: t.voiceNotSupported,
         items: [],
         unresolved: [],
       });
@@ -1417,75 +1422,74 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
   return (
     <>
       <style>{`
-      html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
+        html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: hidden;
+        }
 
-.page-wrap {
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,0.82), transparent 30%),
-    linear-gradient(180deg, #efede7 0%, #e6e1d8 100%);
-  min-height: 100svh;
-  height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  overflow: hidden;
-}
+        .page-wrap {
+          background:
+            radial-gradient(circle at top, rgba(255,255,255,0.9), transparent 34%),
+            linear-gradient(180deg, #f4efe6 0%, #ece5d8 100%);
+          min-height: 100svh;
+          height: 100svh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 18px;
+          font-family: "Segoe UI", Inter, "Noto Sans Devanagari", sans-serif;
+          overflow: hidden;
+        }
 
         .phone {
-  background: rgba(255,255,255,0.97);
-  border: 1px solid rgba(255,255,255,0.5);
-  overflow: hidden;
-  width: 100%;
-  max-width: 430px;
-  height: 100svh;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.08);
-  border-radius: 28px;
-}
+          background: rgba(255,255,255,0.98);
+          border: 1px solid rgba(255,255,255,0.7);
+          overflow: hidden;
+          width: 100%;
+          max-width: 440px;
+          height: 100svh;
+          min-height: 100svh;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 28px 70px rgba(90, 63, 14, 0.12);
+          border-radius: 28px;
+        }
 
+        .topbar {
+          background: rgba(28, 24, 19, 0.96);
+          padding: calc(14px + env(safe-area-inset-top)) 16px 14px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          position: sticky;
+          top: 0;
+          z-index: 10;
+          backdrop-filter: blur(12px);
+          flex-shrink: 0;
+        }
 
-       .topbar {
-  background: rgba(13,13,13,0.93);
-  padding: calc(14px + env(safe-area-inset-top)) 16px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(12px);
-  flex-shrink: 0;
-}
+        .store-mark {
+          width: 46px;
+          height: 46px;
+          border-radius: 15px;
+          background: linear-gradient(135deg, #fff7ed, #ffedd5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 8px 18px rgba(249,115,22,0.12);
+          overflow: hidden;
+        }
 
-
-      .store-mark {
-  width: 46px;
-  height: 46px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #fff7ed, #ffedd5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 8px 18px rgba(249,115,22,0.12);
-  overflow: hidden;
-}
-.store-mark img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-  display: block;
-}
+        .store-mark img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: inherit;
+          display: block;
+        }
 
         .shopkeeper-art {
           animation: shopFloat 2.8s ease-in-out infinite;
@@ -1497,11 +1501,14 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           50% { transform: translateY(-1.5px); }
         }
 
-        .topbar-info { flex: 1; min-width: 0; }
+        .topbar-info {
+          flex: 1;
+          min-width: 0;
+        }
 
         .topbar-name {
-          font-size: 13px;
-          font-weight: 600;
+          font-size: 15px;
+          font-weight: 700;
           color: #fff;
           white-space: nowrap;
           overflow: hidden;
@@ -1509,12 +1516,12 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .topbar-sub {
-          font-size: 10px;
-          color: rgba(255,255,255,0.4);
-          margin-top: 2px;
+          font-size: 12px;
+          color: rgba(255,255,255,0.68);
+          margin-top: 3px;
           display: flex;
           align-items: center;
-          gap: 4px;
+          gap: 5px;
         }
 
         .live-dot {
@@ -1545,8 +1552,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         .lang-opt {
           padding: 4px 10px;
           font-size: 11px;
-          font-weight: 500;
-          color: rgba(255,255,255,0.38);
+          font-weight: 600;
+          color: rgba(255,255,255,0.45);
           border-radius: 18px;
           cursor: pointer;
           transition: all 0.18s;
@@ -1559,25 +1566,25 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           color: #fff;
         }
 
-       .chat {
-  flex: 1;
-  min-height: 0;
-  padding: 14px 12px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
+        .chat {
+          flex: 1;
+          min-height: 0;
+          padding: 16px 12px 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
 
         .date-chip {
           text-align: center;
-          font-size: 10px;
-          color: #999;
-          letter-spacing: 0.07em;
+          font-size: 11px;
+          color: #7b7280;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
+          font-weight: 700;
         }
 
         .msg-row {
@@ -1586,75 +1593,78 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           align-items: flex-end;
         }
 
-      .bot-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #fff7ed, #ffedd5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 8px 18px rgba(249,115,22,0.12);
-  border: 1px solid rgba(249,115,22,0.12);
-  overflow: hidden;
-}
-.bot-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-  display: block;
-}
+        .bot-avatar {
+          width: 34px;
+          height: 34px;
+          border-radius: 12px;
+          background: linear-gradient(135deg, #fff7ed, #ffedd5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          box-shadow: 0 8px 18px rgba(249,115,22,0.12);
+          border: 1px solid rgba(249,115,22,0.12);
+          overflow: hidden;
+        }
+
+        .bot-avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: inherit;
+          display: block;
+        }
 
         .bubble {
-          padding: 10px 12px;
-          font-size: 13px;
-          line-height: 1.5;
-          border-radius: 16px;
+          padding: 13px 14px;
+          font-size: 15px;
+          line-height: 1.7;
+          border-radius: 18px;
         }
 
         .bubble.bot {
-          border-radius: 8px 16px 16px 16px;
-          color: #0d0d0d;
-          padding: 10px;
-          background: rgba(255,255,255,0.9);
+          border-radius: 10px 18px 18px 18px;
+          color: #171717;
+          padding: 14px;
+          background: rgba(255,255,255,0.96);
           border: 1px solid rgba(0,0,0,0.05);
-          box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+          box-shadow: 0 10px 26px rgba(0,0,0,0.05);
           width: calc(100% - 42px);
         }
 
         .bubble-time {
-          font-size: 10px;
+          font-size: 11px;
           display: block;
-          margin-top: 3px;
-          color: #aaa;
+          margin-top: 5px;
+          color: #9ca3af;
         }
 
         .popular-label {
-          font-size: 11px;
-          color: #888;
+          font-size: 12px;
+          color: #5f5a53;
+          font-weight: 700;
         }
 
         .popular-grid {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 10px;
-          margin-top: 9px;
+          margin-top: 10px;
           width: 100%;
         }
 
         .product-card {
           position: relative;
-          border-radius: 16px;
-          border: 0.5px solid rgba(0,0,0,0.08);
-          background: #fff;
+          border-radius: 18px;
+          border: 1px solid rgba(0,0,0,0.08);
+          background: #fffdf9;
           overflow: hidden;
           display: flex;
           flex-direction: column;
           transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
           min-width: 148px;
           scroll-snap-align: start;
+          box-shadow: 0 8px 18px rgba(0,0,0,0.04);
         }
 
         .product-card.compact {
@@ -1673,8 +1683,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .product-card.added {
-          border-color: rgba(34,197,94,0.24);
-          box-shadow: 0 8px 22px rgba(34,197,94,0.08);
+          border-color: rgba(34,197,94,0.22);
+          box-shadow: 0 10px 24px rgba(34,197,94,0.08);
         }
 
         .product-badge {
@@ -1682,12 +1692,12 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           top: 8px;
           left: 8px;
           z-index: 2;
-          font-size: 9px;
+          font-size: 10px;
           font-weight: 700;
-          background: rgba(255,255,255,0.92);
+          background: rgba(255,255,255,0.94);
           border: 1px solid rgba(0,0,0,0.06);
           border-radius: 999px;
-          padding: 3px 7px;
+          padding: 4px 8px;
           color: #374151;
         }
 
@@ -1696,73 +1706,86 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 6px;
+          padding: 8px;
         }
 
         .product-card.compact .product-img {
-          height: 90px;
-          padding: 4px;
+          height: 96px;
+          padding: 6px;
         }
 
-        .product-body {
-          padding: 8px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
+.product-body {
+  padding: 8px 7px 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-        .product-name {
-          font-size: 13px;
-          font-weight: 600;
-          color: #111;
-          line-height: 1.25;
-          margin-bottom: 2px;
-          margin-top: 4px;
-          word-break: break-word;
-        }
 
-        .product-card.compact .product-name {
-          font-size: 11px;
-          min-height: 28px;
-        }
+       .product-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+  margin-bottom: 3px;
+  min-height: 36px;
+  word-break: break-word;
+  text-align: center;
+}
 
-        .product-price {
-          font-size: 13px;
-          color: #15803d;
-          font-weight: 700;
-          margin: 2px 0;
-        }
+
+
+   .product-card.compact .product-name {
+  font-size: 13px;
+  min-height: 34px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+
+       .product-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0 auto 5px;
+  background-color: blue;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+
 
         .product-card.compact .product-price {
-          font-size: 11px;
+          font-size: 16px;
         }
-
-        .product-unit {
-          font-size: 11px;
-          color: #8a8a8a;
-          margin-bottom: 6px;
-          min-height: 14px;
-        }
-
-        .product-card.compact .product-unit {
-          font-size: 10px;
-          min-height: 24px;
-        }
+ .product-unit {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  min-height: 16px;
+  font-weight: 500;
+  text-align: center;
+}
 
         .add-btn {
           width: 100%;
-          height: 28px;
-          border-radius: 9px;
+          height: 34px;
+          border-radius: 11px;
           border: none;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 4px;
-          font-size: 10px;
-          font-weight: 600;
-          background: linear-gradient(135deg, #0d0d0d, #2b2b2b);
+          gap: 5px;
+          font-size: 12px;
+          font-weight: 700;
+          background: linear-gradient(135deg, #191919, #353535);
           color: #fff;
           transition: all 0.15s;
           flex-shrink: 0;
@@ -1778,17 +1801,18 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .product-card.compact .add-btn {
-          height: 26px;
-          font-size: 9px;
-          border-radius: 8px;
+          height: 34px;
+          font-size: 12px;
+          border-radius: 10px;
         }
 
         .loading-btn {
-          height: 28px;
+          height: 34px;
           width: 100%;
-          border-radius: 9px;
-          background: #f5f5f5;
-          font-size: 11px;
+          border-radius: 11px;
+          background: #f4f1ea;
+          font-size: 12px;
+          font-weight: 600;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1810,22 +1834,24 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           100% { transform: rotate(360deg); }
         }
 
-        .stepper-btn {
-          background: #f5f5f3;
-          border: 0.5px solid rgba(0,0,0,0.1);
-          justify-content: space-between;
-          padding: 0 4px;
-          cursor: default;
-        }
+      .stepper-btn {
+  background: #f6f4ef;
+  border: 1px solid rgba(0,0,0,0.08);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  cursor: default;
+}
+
 
         .step-btn {
-          width: 18px;
-          height: 18px;
-          border-radius: 5px;
-          background: rgba(0,0,0,0.07);
+          width: 22px;
+          height: 22px;
+          border-radius: 6px;
+          background: rgba(0,0,0,0.08);
           border: none;
           color: #0d0d0d;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 1;
           cursor: pointer;
           display: flex;
@@ -1835,59 +1861,57 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .step-count {
-          font-size: 11px;
-          font-weight: 500;
+          font-size: 13px;
+          font-weight: 700;
           color: #0d0d0d;
         }
 
-      .input-bar {
-  position: relative;
-  flex-shrink: 0;
-  background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(18px);
-  padding: 10px 12px calc(12px + env(safe-area-inset-bottom));
-  border-top: 0.5px solid rgba(0,0,0,0.06);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
-}
-
-
-       .input-pill {
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 46px;
-  background: #f5f5f3;
-  border: 0.5px solid rgba(0,0,0,0.1);
-  border-radius: 22px;
-  padding: 12px 15px;
-  font-size: 16px;
-  color: #111;
-  outline: none;
-}
-
-
-        .input-pill::placeholder {
-          color: #9ca3af;
+        .input-bar {
+          position: relative;
+          flex-shrink: 0;
+          background: rgba(255,255,255,0.98);
+          backdrop-filter: blur(18px);
+          padding: 10px 12px calc(12px + env(safe-area-inset-bottom));
+          border-top: 1px solid rgba(0,0,0,0.06);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
         }
 
-    .icon-btn-ghost,
-.icon-btn-dark {
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  min-height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
-  border: none;
-}
+        .input-pill {
+          flex: 1 1 auto;
+          min-width: 0;
+          min-height: 48px;
+          background: #f7f4ee;
+          border: 1px solid rgba(0,0,0,0.08);
+          border-radius: 24px;
+          padding: 12px 16px;
+          font-size: 16px;
+          color: #111;
+          outline: none;
+          font-weight: 500;
+        }
 
+        .input-pill::placeholder {
+          color: #8f96a3;
+        }
+
+        .icon-btn-ghost,
+        .icon-btn-dark {
+          width: 46px;
+          height: 46px;
+          min-width: 46px;
+          min-height: 46px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex-shrink: 0;
+          transition: all 0.2s ease;
+          border: none;
+        }
 
         .icon-btn-ghost {
           background: linear-gradient(135deg, #ffffff, #f3f4f6);
@@ -1919,8 +1943,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           display: flex;
           align-items: center;
           gap: 8px;
-          font-size: 13px;
-          font-weight: 600;
+          font-size: 14px;
+          font-weight: 700;
           color: #2e7d32;
         }
 
@@ -1947,14 +1971,14 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           display: flex;
           justify-content: center;
           gap: 10px;
-          margin-top: 6px;
+          margin-top: 8px;
         }
 
         .capsule-btn {
           border-radius: 999px;
-          padding: 8px 14px;
-          font-size: 11px;
-          font-weight: 600;
+          padding: 10px 16px;
+          font-size: 12px;
+          font-weight: 700;
           cursor: pointer;
           transition: all 0.2s ease;
           display: flex;
@@ -1979,16 +2003,24 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           margin-top: 12px;
         }
 
-        .strip-title {
-          font-size: 13px;
-          font-weight: 700;
-          margin-bottom: 4px;
+        .strip-title,
+        .summary-title,
+        .delivery-title,
+        .history-title {
+          font-size: 16px;
+          font-weight: 800;
+          margin-bottom: 8px;
+          color: #111827;
         }
 
-        .strip-sub {
-          font-size: 11px;
-          color: #777;
-          margin-bottom: 8px;
+        .strip-sub,
+        .history-meta,
+        .summary-meta,
+        .delivery-sub,
+        .pay-sub {
+          font-size: 12px;
+          color: #6b7280;
+          line-height: 1.6;
         }
 
         .horizontal-strip {
@@ -2008,20 +2040,12 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           max-width: 100%;
         }
 
-        .summary-title,
-        .delivery-title,
-        .history-title {
-          font-size: 14px;
-          font-weight: 700;
-          margin-bottom: 10px;
-        }
-
         .summary-card,
         .history-card,
         .success-card {
-          background: #fff;
-          border-radius: 16px;
-          padding: 12px;
+          background: #fffdfa;
+          border-radius: 18px;
+          padding: 14px;
           border: 1px solid rgba(0,0,0,0.06);
           box-shadow: 0 4px 14px rgba(0,0,0,0.04);
         }
@@ -2039,24 +2063,18 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .history-id {
-          font-size: 12px;
-          font-weight: 700;
+          font-size: 13px;
+          font-weight: 800;
           color: #111827;
         }
 
         .history-badge {
           font-size: 10px;
-          font-weight: 700;
+          font-weight: 800;
           padding: 4px 8px;
           border-radius: 999px;
           background: rgba(0,0,0,0.06);
           color: #111827;
-        }
-
-        .history-meta {
-          font-size: 11px;
-          color: #777;
-          margin-bottom: 10px;
         }
 
         .summary-item {
@@ -2067,31 +2085,46 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .summary-item img {
-          width: 42px;
-          height: 42px;
-          border-radius: 10px;
+          width: 44px;
+          height: 44px;
+          border-radius: 12px;
           background: #f5f5f5;
           padding: 4px;
           object-fit: contain;
         }
 
-        .summary-info { flex: 1; }
-        .summary-name { font-size: 12px; font-weight: 600; }
-        .summary-meta { font-size: 11px; color: #777; }
-        .summary-price { font-weight: 600; }
+        .summary-info {
+          flex: 1;
+        }
+
+        .summary-name,
+        .delivery-name,
+        .pay-name {
+          font-size: 14px;
+          font-weight: 700;
+          color: #111827;
+        }
+
+        .summary-price {
+          font-size: 15px;
+          font-weight: 800;
+          color: #15803d;
+        }
 
         .summary-row,
         .summary-total {
           display: flex;
           justify-content: space-between;
-          font-size: 12px;
-          margin-top: 6px;
+          font-size: 13px;
+          margin-top: 8px;
+          color: #374151;
         }
 
         .summary-total {
-          font-weight: 700;
-          margin-top: 8px;
-          font-size: 14px;
+          font-weight: 800;
+          margin-top: 10px;
+          font-size: 17px;
+          color: #111827;
         }
 
         .summary-divider {
@@ -2101,15 +2134,16 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .place-btn {
-          margin-top: 12px;
+          margin-top: 14px;
           width: 100%;
-          padding: 11px;
-          border-radius: 12px;
-          background: linear-gradient(135deg, #0d0d0d, #2a2a2a);
+          padding: 13px;
+          border-radius: 14px;
+          background: linear-gradient(135deg, #111111, #2f2f2f);
           color: #fff;
           border: none;
           cursor: pointer;
-          font-size: 13px;
+          font-size: 14px;
+          font-weight: 700;
           transition: 0.2s;
         }
 
@@ -2122,10 +2156,10 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
 
         .delivery-card,
         .pay-card {
-          background: #fff;
+          background: #fffdfa;
           border: 1px solid rgba(0,0,0,0.08);
           border-radius: 16px;
-          padding: 14px;
+          padding: 15px 14px;
           cursor: pointer;
           transition: all 0.25s ease;
           display: flex;
@@ -2146,23 +2180,10 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           gap: 3px;
         }
 
-        .delivery-name,
-        .pay-name {
-          font-size: 13px;
-          font-weight: 600;
-          color: #111;
-        }
-
-        .delivery-sub,
-        .pay-sub {
-          font-size: 11px;
-          color: #777;
-        }
-
         .delivery-right,
         .pay-check {
           font-size: 12px;
-          font-weight: 600;
+          font-weight: 700;
           color: #0d0d0d;
         }
 
@@ -2179,11 +2200,11 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
 
         .input {
           width: 100%;
-          padding: 11px;
+          padding: 13px 12px;
           margin-top: 10px;
-          border-radius: 12px;
+          border-radius: 13px;
           border: 1px solid rgba(0,0,0,0.1);
-          font-size: 13px;
+          font-size: 14px;
           outline: none;
           transition: 0.2s;
         }
@@ -2207,12 +2228,12 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         }
 
         .success-heading {
-          font-size: 15px;
-          font-weight: 600;
+          font-size: 16px;
+          font-weight: 700;
         }
 
         .success-id {
-          font-size: 11px;
+          font-size: 12px;
           color: #777;
           margin-top: 2px;
         }
@@ -2226,168 +2247,147 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
         .success-details {
           display: flex;
           justify-content: space-between;
-          font-size: 12px;
+          font-size: 13px;
           color: #555;
         }
 
         .success-time {
-          font-weight: 600;
+          font-weight: 700;
           color: #111;
         }
 
-    @media (max-width: 480px) {
-  .page-wrap {
-    padding: 0;
-    min-height: 100dvh;
-    height: 100dvh;
-    align-items: stretch;
-    justify-content: stretch;
-  }
+        @media (max-width: 480px) {
+          .page-wrap {
+            padding: 0;
+            min-height: 100dvh;
+            height: 100dvh;
+            align-items: stretch;
+            justify-content: stretch;
+          }
 
-  .phone {
-    max-width: 100vw;
-    width: 100vw;
-    height: 100dvh;
-    min-height: 100dvh;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-  }
+          .phone {
+            max-width: 100vw;
+            width: 100vw;
+            height: 100dvh;
+            min-height: 100dvh;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+          }
+.product-body.product-body {
+  padding: 7px 6px 9px;
+}
+          .topbar {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
 
-  .topbar {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
+          .chat {
+            padding: 14px 12px 10px;
+            gap: 12px;
+          }
 
-  .chat {
-    padding: 14px 12px 10px;
-    gap: 12px;
-  }
-
-  .popular-grid {
+         .popular-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
-.product-card {
-  border-radius: 16px;
-}
+          .product-card {
+            border-radius: 16px;
+          }
 
-.product-img {
-  height: 96px;
-  padding: 6px;
-}
+          .product-img,
+          .product-card.compact .product-img {
+            height: 100px;
+            padding: 6px;
+          }
 
+          
 
-  .product-card.compact .product-img {
-  height: 96px;
-  padding: 6px;
-}
+          .product-name,
+          .product-card.compact .product-name {
+            font-size: 13px;
+            line-height: 1.3;
+            min-height: 36px;
+          }
 
-.product-body {
-  padding: 8px 6px 9px;
-}
+          .product-price,
+          .product-card.compact .product-price {
+            font-size: 16px;
+          }
 
-.product-name {
-  font-size: 12px;
-  line-height: 1.25;
-}
+          .product-unit,
+          .product-card.compact .product-unit {
+            font-size: 11px;
+            min-height: 16px;
+          }
 
- .product-card.compact .product-name {
-  font-size: 12px;
-  min-height: 32px;
-}
+          .add-btn,
+          .product-card.compact .add-btn {
+            height: 34px;
+            font-size: 12px;
+            border-radius: 10px;
+          }
 
-.product-price {
-  font-size: 14px;
-}
+          .stepper-btn {
+            height: 34px;
+          }
 
-.product-card.compact .product-price {
-  font-size: 14px;
-}
+          .step-btn {
+            width: 22px;
+            height: 22px;
+            font-size: 14px;
+          }
 
-.product-unit {
-  font-size: 11px;
-  min-height: 16px;
-}
+          .step-count {
+            font-size: 12px;
+          }
 
-  .product-card.compact .product-unit {
-  font-size: 11px;
-  min-height: 16px;
-}
+          .input-bar {
+            padding: 10px 10px calc(12px + env(safe-area-inset-bottom));
+            gap: 8px;
+          }
 
-.add-btn {
-  height: 32px;
-  font-size: 11px;
-  border-radius: 10px;
-}
+          .input-pill {
+            font-size: 16px;
+            min-height: 50px;
+            padding: 13px 16px;
+          }
 
-.product-card.compact .add-btn {
-  height: 32px;
-  font-size: 11px;
-  border-radius: 10px;
-}
+          .icon-btn-ghost,
+          .icon-btn-dark {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+          }
 
-.stepper-btn {
-  height: 32px;
-}
+          .bubble {
+            font-size: 15px;
+          }
 
-
- .step-btn {
-  width: 20px;
-  height: 20px;
-  font-size: 14px;
-}
-
-.step-count {
-  font-size: 12px;
-}
-
-  .input-bar {
-    padding: 10px 10px calc(12px + env(safe-area-inset-bottom));
-    gap: 8px;
-  }
-
-  .input-pill {
-    font-size: 16px;
-    min-height: 50px;
-    padding: 13px 16px;
-  }
-
-  .icon-btn-ghost,
-  .icon-btn-dark {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    min-height: 48px;
-  }
-
-  .bubble {
-    font-size: 14px;
-  }
-
-  .summary-title,
-  .delivery-title,
-  .history-title {
-    font-size: 15px;
-  }
-}
-      `}
-      </style>
+          .summary-title,
+          .delivery-title,
+          .history-title,
+          .strip-title {
+            font-size: 15px;
+          }
+        }
+      `}</style>
 
       <div className="page-wrap">
-      <div
-  className="phone"
-  style={
-    viewportHeight
-      ? { height: `${viewportHeight}px`, minHeight: `${viewportHeight}px` }
-      : undefined
-  }
->
+        <div
+          className="phone"
+          style={
+            viewportHeight
+              ? { height: `${viewportHeight}px`, minHeight: `${viewportHeight}px` }
+              : undefined
+          }
+        >
           <div className="topbar">
-          <div className="store-mark">
-  <img src="/SHOPO.png" alt="shopkeeper" />
-</div>
+            <div className="store-mark">
+              <img src="/SHOPO.png" alt="shopkeeper" />
+            </div>
 
             <div className="topbar-info">
               <div className="topbar-name">{t.storeName}</div>
@@ -2425,7 +2425,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                 <span className="bubble-time" style={{ marginBottom: 7 }}>9:41 AM</span>
 
                 <div className="popular-grid">
-                {popularProducts.map((product, i) => (
+                  {popularProducts.map((product, i) => (
                     <ProductCard
                       key={product.id}
                       index={i}
@@ -2454,7 +2454,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
               <div className="msg-row">
                 <BotAvatar />
                 <div className="bubble bot summary-bubble">
-                <div className="history-title">{t.previousOrders}</div>
+                  <div className="history-title">{t.previousOrders}</div>
 
                   {completedOrders.map((order) => (
                     <div key={order.id} className="history-card">
@@ -2464,7 +2464,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       </div>
 
                       <div className="history-meta">
-                      {order.deliveryType === "pickup" ? t.pickupLabel : t.deliveryLabel} • {order.placedAt}
+                        {order.deliveryType === "pickup" ? t.pickupLabel : t.deliveryLabel} • {order.placedAt}
                       </div>
 
                       {order.items.map((item) => (
@@ -2483,19 +2483,19 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       <div className="summary-divider"></div>
 
                       <div className="summary-row">
-                        <span>Subtotal</span>
+                        <span>{t.subtotal}</span>
                         <span>₹{order.subtotal}</span>
                       </div>
 
                       {order.deliveryCharge > 0 && (
                         <div className="summary-row">
-                          <span>Delivery</span>
+                          <span>{t.delivery}</span>
                           <span>₹{order.deliveryCharge}</span>
                         </div>
                       )}
 
                       <div className="summary-total">
-                        <span>Total</span>
+                        <span>{t.total}</span>
                         <span>₹{order.total}</span>
                       </div>
                     </div>
@@ -2512,7 +2512,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                     <div className="success-top">
                       <div className="success-checkmark">✓</div>
                       <div>
-                      <div className="success-heading">{t.orderPlaced}</div>
+                        <div className="success-heading">{t.orderPlaced}</div>
                         <div className="success-id">#{justPlacedOrder.id}</div>
                       </div>
                     </div>
@@ -2520,7 +2520,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                     <div className="success-divider"></div>
 
                     <div className="success-details">
-                    <div>{t.preparing}</div>
+                      <div>{t.preparing}</div>
                       <div className="success-time">{justPlacedOrder.etaText}</div>
                     </div>
                   </div>
@@ -2548,19 +2548,19 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
 
                   {botMessage?.type === "ai" && (
                     <div>
-                      <div style={{ fontSize: "13px", marginBottom: "8px", fontWeight: "600" }}>
+                      <div style={{ fontSize: "14px", marginBottom: "8px", fontWeight: 700 }}>
                         {botMessage.text}
                       </div>
 
                       {botMessage.items.map((item, i) => (
-                        <div key={i} style={{ fontSize: "12px", color: "#555", marginBottom: "4px" }}>
+                        <div key={i} style={{ fontSize: "13px", color: "#444", marginBottom: "5px", fontWeight: 500 }}>
                           ✓ {item.name} {item.unit ? `(${item.unit})` : ""} × {item.qty}
                         </div>
                       ))}
 
                       {botMessage.unresolved.length > 0 && (
-                        <div style={{ fontSize: "12px", color: "#b45309", marginTop: "8px" }}>
-                          Ye clear nahi hua: {botMessage.unresolved.join(", ")}
+                        <div style={{ fontSize: "12px", color: "#b45309", marginTop: "8px", fontWeight: 600 }}>
+                          {t.unclearPrefix} {botMessage.unresolved.join(", ")}
                         </div>
                       )}
                     </div>
@@ -2643,15 +2643,15 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
 
                       {orderStage === "adding" && cartProducts.length > 0 && (
                         <div className="order-actions">
-                         <button
-  className="capsule-btn light"
-  onClick={() => {
-    setOrderStage("adding");
-    setShowSuggestions((prev) => !prev);
-  }}
->
-  {showSuggestions ? "Close" : `+ ${t.more}`}
-</button>
+                          <button
+                            className="capsule-btn light"
+                            onClick={() => {
+                              setOrderStage("adding");
+                              setShowSuggestions((prev) => !prev);
+                            }}
+                          >
+                            {showSuggestions ? t.close : `+ ${t.more}`}
+                          </button>
 
                           <button
                             className="capsule-btn dark"
@@ -2660,7 +2660,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                               setShowSuggestions(false);
                             }}
                           >
-                           {t.done} →
+                            {t.done}
                           </button>
                         </div>
                       )}
@@ -2670,7 +2670,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                   {cartProducts.length === 0 && pendingChoiceCards.length > 0 && (
                     <div className="strip-section">
                       <div className="strip-title">{t.choose}</div>
-                      <div className="strip-sub">Single line me exact options</div>
+                      <div className="strip-sub">{t.singleLineExact}</div>
 
                       <div className="horizontal-strip">
                         {pendingChoiceCards.map((entry, i) => (
@@ -2725,7 +2725,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
               <div className="msg-row" ref={deliveryRef}>
                 <BotAvatar />
                 <div className="bubble bot summary-bubble">
-                <div className="delivery-title">{t.deliveryTitle}</div>
+                  <div className="delivery-title">{t.deliveryTitle}</div>
 
                   <div className="delivery-options">
                     <div
@@ -2736,8 +2736,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       }}
                     >
                       <div className="delivery-left">
-                      <div className="delivery-name">{t.selfPickup}</div>
-                      <div className="delivery-sub">{t.ready10}</div>
+                        <div className="delivery-name">{t.selfPickup}</div>
+                        <div className="delivery-sub">{t.ready10}</div>
                       </div>
                       <div className="delivery-right">{t.free}</div>
                     </div>
@@ -2750,8 +2750,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       }}
                     >
                       <div className="delivery-left">
-                      <div className="delivery-name">{t.homeDelivery}</div>
-                      <div className="delivery-sub">{t.deliveryInfo}</div>
+                        <div className="delivery-name">{t.homeDelivery}</div>
+                        <div className="delivery-sub">{t.deliveryInfo}</div>
                       </div>
                       <div className="delivery-right">₹20</div>
                     </div>
@@ -2796,7 +2796,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
               <div className="msg-row">
                 <BotAvatar />
                 <div className="bubble bot summary-bubble">
-                <div className="summary-title">{t.orderSummary}</div>
+                  <div className="summary-title">{t.orderSummary}</div>
 
                   <div className="summary-card">
                     {cartProducts.map((item) => (
@@ -2818,19 +2818,19 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                     <div className="summary-divider"></div>
 
                     <div className="summary-row">
-                    <span>{t.subtotal}</span>
+                      <span>{t.subtotal}</span>
                       <span>₹{subtotal}</span>
                     </div>
 
                     {deliveryType === "delivery" && (
                       <div className="summary-row">
-                       <span>{t.delivery}</span>
+                        <span>{t.delivery}</span>
                         <span>₹20</span>
                       </div>
                     )}
 
                     <div className="summary-total">
-                    <span>{t.total}</span>
+                      <span>{t.total}</span>
                       <span>₹{grandTotal}</span>
                     </div>
 
@@ -2839,7 +2839,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       className="place-btn"
                       onClick={() => setOrderStep("details")}
                     >
-                    {t.continue}
+                      {t.continue}
                     </button>
                   </div>
                 </div>
@@ -2851,7 +2851,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                 <BotAvatar />
                 <div className="bubble bot">
                   <div className="summary-title">
-                  {deliveryType === "pickup" ? t.phoneTitle : t.detailsTitle}
+                    {deliveryType === "pickup" ? t.phoneTitle : t.detailsTitle}
                   </div>
 
                   <input
@@ -2890,7 +2890,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       }
                     }}
                   >
-                   {deliveryType === "pickup" ? t.placeOrder : t.choosePayment}
+                    {deliveryType === "pickup" ? t.placeOrder : t.choosePayment}
                   </button>
                 </div>
               </div>
@@ -2900,7 +2900,7 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
               <div className="msg-row" ref={paymentRef}>
                 <BotAvatar />
                 <div className="bubble bot">
-                <div className="summary-title">{t.paymentTitle}</div>
+                  <div className="summary-title">{t.paymentTitle}</div>
 
                   <div className="payment-options">
                     <div
@@ -2913,8 +2913,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       }}
                     >
                       <div className="pay-left">
-                      <div className="pay-name">{t.cod}</div>
-                      <div className="pay-sub">{t.codSub}</div>
+                        <div className="pay-name">{t.cod}</div>
+                        <div className="pay-sub">{t.codSub}</div>
                       </div>
                       {paymentMethod === "cod" && <div className="pay-check">✓</div>}
                     </div>
@@ -2937,8 +2937,8 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
                       }}
                     >
                       <div className="pay-left">
-                      <div className="pay-name">{t.upi}</div>
-                      <div className="pay-sub">{t.upiSub}</div>
+                        <div className="pay-name">{t.upi}</div>
+                        <div className="pay-sub">{t.upiSub}</div>
                       </div>
                       {paymentMethod === "upi" && <div className="pay-check">✓</div>}
                     </div>
@@ -2951,20 +2951,19 @@ CATEGORY_ALIASES[inputItem.category]?.forEach((alias) => {
           </div>
 
           <div className="input-bar">
-     <input
-  ref={inputRef}
-  className="input-pill"
-  placeholder={prompts[placeholderIndex]}
-  value={searchQuery}
-  onChange={(e) => setSearchQuery(e.target.value)}
-  onKeyDown={(e) => {
-    if (e.key === "Enter") {
-      handleUserMessage();
-    }
-  }}
-  enterKeyHint="send"
-/>
-
+            <input
+              ref={inputRef}
+              className="input-pill"
+              placeholder={prompts[placeholderIndex]}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleUserMessage();
+                }
+              }}
+              enterKeyHint="send"
+            />
 
             <button
               className={`icon-btn-ghost${isListening ? " mic-active" : ""}`}
